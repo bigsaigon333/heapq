@@ -1,0 +1,33 @@
+{
+  "name": "heapq",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "bigsaigon333 <likepeppermint@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "pinst": ">=2",
+    "prettier": "2.5.1",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "prettier": "prettier --write --ignore-unknown .",
+    "eslint": "eslint --fix --cache .",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
+  }
+}
